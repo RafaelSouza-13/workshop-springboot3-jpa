@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.inicio.curso.model.User;
+import com.inicio.curso.entities.model.User;
 import com.inicio.curso.services.UserService;
 
 @RestController

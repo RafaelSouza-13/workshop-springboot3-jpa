@@ -1,4 +1,4 @@
-package com.inicio.curso.model;
+package com.inicio.curso.entities.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;

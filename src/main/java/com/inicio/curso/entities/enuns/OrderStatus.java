@@ -1,4 +1,4 @@
-package com.inicio.curso.enuns;
+package com.inicio.curso.entities.enuns;
 
 public enum OrderStatus {
     WAITING_PAYMENT(1),
