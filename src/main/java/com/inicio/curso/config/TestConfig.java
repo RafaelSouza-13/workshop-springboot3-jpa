@@ -12,6 +12,7 @@ import com.inicio.curso.entities.enuns.OrderStatus;
 import com.inicio.curso.entities.model.Category;
 import com.inicio.curso.entities.model.Order;
 import com.inicio.curso.entities.model.OrderItem;
+import com.inicio.curso.entities.model.Payment;
 import com.inicio.curso.entities.model.Product;
 import com.inicio.curso.entities.model.User;
 import com.inicio.curso.repositories.CategoryRepository;
@@ -22,7 +23,7 @@ import com.inicio.curso.repositories.UserRepository;
 
 @Configuration
 @Profile("test")
-public class UserTest implements CommandLineRunner {
+public class TestConfig implements CommandLineRunner {
     @Autowired
     private UserRepository userRepository;
     @Autowired
@@ -74,6 +75,11 @@ public class UserTest implements CommandLineRunner {
         OrderItem oi4 = new OrderItem(o3, p5, 2, p5.getPrice());
 
         orderItemRepository.saveAll(Arrays.asList(oi1, oi2, oi3, oi4));
+
+        Payment payment1 = new Payment(null, Instant.parse("2019-06-20T21:53:07Z"), o1);
+        o1.setPayment(payment1);
+
+        orderRepository.save(o1);
     }
     
 }
